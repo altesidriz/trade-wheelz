@@ -1,0 +1,136 @@
+.car-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .car-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .car-content {
+    padding: 1.5rem;
+  }
+
+  .car-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    .car-title {
+      margin: 0;
+      color: #03396c;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .car-price {
+      color: #ff6b35;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+
+  .car-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+
+      .label {
+        color: #666;
+        font-weight: 500;
+      }
+
+      .value {
+        color: #333;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .car-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .car-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+
+    .contact-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .contact-info {
+      color: #03396c;
+      font-weight: 600;
+    }
+  }
+
+  .car-actions {
+    display: flex;
+    gap: 0.5rem;
+
+    .btn {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .car-card {
+    .car-header {
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .car-price {
+        align-self: flex-start;
+      }
+    }
+
+    .car-details {
+      grid-template-columns: 1fr;
+    }
+  }
+}

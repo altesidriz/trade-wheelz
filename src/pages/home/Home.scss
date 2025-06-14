@@ -1,0 +1,248 @@
+.landing-page {
+  .hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(3, 57, 108, 0.8) 0%,
+          rgba(255, 107, 53, 0.6) 100%
+        );
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+
+      .hero-text {
+        text-align: center;
+        color: white;
+        max-width: 600px;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 3.5rem;
+          margin-bottom: 1rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+          @media (max-width: 768px) {
+            font-size: 2.5rem;
+          }
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-buttons {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .search-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+  }
+
+  .featured-cars {
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      h2 {
+        color: #03396c;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #666;
+        font-size: 1.1rem;
+      }
+    }
+
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  .how-it-works {
+    background: #f8f9fa;
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      h2 {
+        color: #03396c;
+      }
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .step-card {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .step-number {
+          width: 60px;
+          height: 60px;
+          background: #ff6b35;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 0 auto 1rem;
+        }
+
+        h3 {
+          color: #03396c;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #666;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  .benefits {
+    .benefits-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .benefits-text {
+        h2 {
+          color: #03396c;
+          margin-bottom: 2rem;
+        }
+
+        .benefits-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .benefit-icon {
+              width: 30px;
+              height: 30px;
+              background: #ff6b35;
+              color: white;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: bold;
+              flex-shrink: 0;
+            }
+
+            h4 {
+              color: #03396c;
+              margin-bottom: 0.5rem;
+            }
+
+            p {
+              color: #666;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .benefits-image {
+        img {
+          width: 100%;
+          border-radius: 12px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      color: #03396c;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+}
